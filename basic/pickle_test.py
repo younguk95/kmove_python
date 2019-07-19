@@ -1,11 +1,19 @@
-import random
-import time
+import pickle
 
+data={1:'python',2:'you'}
 
-word = ["안녕하세요","필통","전화기","마우스","충전기","TV", "지갑", "볼펜"]
-rank={}
-def sortV(x):
-    return x[1]
+f=open('test_p.txt','wb')
+pickle.dump(data,f)
+f.close()
+
+f=open('test_p.txt','rb')
+data1=pickle.load
+f.close()
+
+print(data)
+print(data1)
+print(type(data1))
+
 
 while True:
     print("1.문제불러오기 2.타자게임 3.등수목록4.저장하기5.불러오기")
